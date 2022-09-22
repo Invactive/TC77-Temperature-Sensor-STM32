@@ -122,9 +122,9 @@ int main(void)
   while (1)
   {
 	  // SPI
-	  HAL_GPIO_WritePin(GPIOF, GPIO_PIN_12, GPIO_PIN_RESET);
+	  HAL_GPIO_WritePin(GPIOF, GPIO_PIN_12, GPIO_PIN_RESET); // !CS line low
 	  HAL_SPI_Receive(&hspi1, spibuf, 2, 100);
-	  HAL_GPIO_WritePin(GPIOF, GPIO_PIN_12, GPIO_PIN_SET);
+	  HAL_GPIO_WritePin(GPIOF, GPIO_PIN_12, GPIO_PIN_SET); // !CS line high
 
 	  // 2 bytes (uint8_t) moved to one word (uint16_t)
 	  raw_reading = (spibuf[0] << 8) + spibuf[1];
