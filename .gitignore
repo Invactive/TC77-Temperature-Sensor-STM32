@@ -2,4 +2,4 @@
 .metadata/
 /Debug/
 /Release/
-.launch
+*.launch
