@@ -1,6 +1,5 @@
-*/.idea/
-*/.settings/
-*/.metadata/
-*/Debug/
-*/Release/
-*.launch
+.settings/
+.metadata/
+/Debug/
+/Release/
+.launch
